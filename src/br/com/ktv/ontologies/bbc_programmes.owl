@@ -1,0 +1,2609 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/ontology/po/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/ontology/po/">
+    <Prefix name="" IRI="http://purl.org/ontology/po/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="mo" IRI="http://purl.org/ontology/mo/"/>
+    <Prefix name="tl" IRI="http://purl.org/NET/c4dm/timeline.owl#"/>
+    <Prefix name="vs" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="frbr" IRI="http://purl.org/vocab/frbr/core#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="tags" IRI="http://www.holygoat.co.uk/owl/redwood/0.1/tags/"/>
+    <Prefix name="event" IRI="http://purl.org/NET/c4dm/event.owl#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://purl.org/NET/c4dm/event.owl</Import>
+    <Import>http://purl.org/NET/c4dm/timeline.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Programmes ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A vocabulary for programme data.
+		It defines concepts such as brands, series, episodes, broadcasts, etc.
+	</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="mo:Track"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AudioDescribedVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Brand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Broadcast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Broadcaster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Channel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Clip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DAB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DVB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Episode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FirstBroadcast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Format"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPStream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LW"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LocalRadio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MusicSegment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NationalRadio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OriginalVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Outlet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Programme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ProgrammeItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Radio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RegionalRadio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RepeatBroadcast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Season"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Series"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ShortenedVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SignedVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SpeechSegment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Subtitle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Version"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Web"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="tags:Tagging"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geo:SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Document"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:contributor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dcterms:hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dcterms:isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="actor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="anchor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="author"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="broadcast_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="broadcast_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="broadcasted_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="broadcaster"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="category"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="channel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="clip"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="commentator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="credit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="director"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="episode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="executive_producer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="format"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="genre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="masterbrand"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="microsite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="news_reader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="outlet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="parent_series"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="parent_service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="participant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="place"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="producer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="season_broadcast"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="series"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="subject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="time"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="track"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="version"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="tags:tag"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="foaf:based_near"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="foaf:page"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="aspect_ratio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="frequency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="long_synopsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="medium_synopsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="position"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="schedule_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="short_synopsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="sound_format"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="subtitle_language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="synopsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="text"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://metade.org/foaf.rdf#me"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.aelius.com/njh#me"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="Person"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Place"/>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="AudioDescribedVersion"/>
+        <Class IRI="Version"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Brand"/>
+        <Class IRI="Programme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Broadcast"/>
+        <Class abbreviatedIRI="event:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Broadcaster"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Clip"/>
+        <Class IRI="Programme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Clip"/>
+        <Class IRI="ProgrammeItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DAB"/>
+        <Class IRI="Channel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DVB"/>
+        <Class IRI="Channel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Episode"/>
+        <Class IRI="Programme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Episode"/>
+        <Class IRI="ProgrammeItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FM"/>
+        <Class IRI="Channel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FirstBroadcast"/>
+        <Class IRI="Broadcast"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Format"/>
+        <Class IRI="Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Genre"/>
+        <Class IRI="Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPStream"/>
+        <Class IRI="Channel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LW"/>
+        <Class IRI="Channel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LocalRadio"/>
+        <Class IRI="Radio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MusicSegment"/>
+        <Class IRI="Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NationalRadio"/>
+        <Class IRI="Radio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OriginalVersion"/>
+        <Class IRI="Version"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Outlet"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Person"/>
+        <Class IRI="Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <Class IRI="Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ProgrammeItem"/>
+        <Class IRI="Programme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Radio"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RegionalRadio"/>
+        <Class IRI="Radio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="RepeatBroadcast"/>
+        <Class IRI="Broadcast"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Segment"/>
+        <Class abbreviatedIRI="event:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Series"/>
+        <Class IRI="Programme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ShortenedVersion"/>
+        <Class IRI="Version"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SignedVersion"/>
+        <Class IRI="Version"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SpeechSegment"/>
+        <Class IRI="Segment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Subject"/>
+        <Class IRI="Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Subtitle"/>
+        <Class abbreviatedIRI="event:Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TV"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Web"/>
+        <Class IRI="Service"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="Brand"/>
+        <Class IRI="Clip"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Brand"/>
+        <Class IRI="Episode"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Brand"/>
+        <Class IRI="ProgrammeItem"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Brand"/>
+        <Class IRI="Series"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Clip"/>
+        <Class IRI="Series"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Episode"/>
+        <Class IRI="Series"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="FirstBroadcast"/>
+        <Class IRI="RepeatBroadcast"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="LocalRadio"/>
+        <Class IRI="NationalRadio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="LocalRadio"/>
+        <Class IRI="RegionalRadio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="NationalRadio"/>
+        <Class IRI="RegionalRadio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="OriginalVersion"/>
+        <Class IRI="ShortenedVersion"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="ProgrammeItem"/>
+        <Class IRI="Series"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Radio"/>
+        <Class IRI="TV"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="Radio"/>
+        <Class IRI="Web"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="TV"/>
+        <Class IRI="Web"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="http://metade.org/foaf.rdf#me"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="http://moustaki.org/foaf.rdf#moustaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="http://www.aelius.com/njh#me"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dc:contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.aelius.com/njh#me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dc:contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://metade.org/foaf.rdf#me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dc:creator"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://moustaki.org/foaf.rdf#moustaki"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="dc:date"/>
+        <NamedIndividual IRI=""/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">$Date: 2009/02/20 16:00:00 $</Literal>
+    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="broadcast_on"/>
+        <ObjectProperty IRI="broadcasted_on"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="actor"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="anchor"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="author"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="broadcast_of"/>
+        <ObjectProperty abbreviatedIRI="event:factor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="broadcast_on"/>
+        <ObjectProperty abbreviatedIRI="event:factor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="clip"/>
+        <ObjectProperty abbreviatedIRI="dcterms:hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="commentator"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="credit"/>
+        <ObjectProperty abbreviatedIRI="dc:contributor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="director"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="episode"/>
+        <ObjectProperty abbreviatedIRI="dcterms:hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="executive_producer"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="format"/>
+        <ObjectProperty IRI="category"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="genre"/>
+        <ObjectProperty IRI="category"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="location"/>
+        <ObjectProperty abbreviatedIRI="foaf:based_near"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="microsite"/>
+        <ObjectProperty abbreviatedIRI="foaf:page"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="news_reader"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="parent_series"/>
+        <ObjectProperty abbreviatedIRI="dcterms:isPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="parent_service"/>
+        <ObjectProperty abbreviatedIRI="dcterms:isPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="participant"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="performer"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="person"/>
+        <ObjectProperty IRI="category"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="place"/>
+        <ObjectProperty IRI="category"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="producer"/>
+        <ObjectProperty IRI="credit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="series"/>
+        <ObjectProperty abbreviatedIRI="dcterms:hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="subject"/>
+        <ObjectProperty IRI="category"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="track"/>
+        <ObjectProperty abbreviatedIRI="event:factor"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="service"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="version"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="parent_series"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="parent_service"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="series"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="actor"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="anchor"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="author"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="broadcast_of"/>
+        <Class IRI="Broadcast"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="broadcast_on"/>
+        <Class IRI="Broadcast"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="broadcaster"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="category"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="channel"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="clip"/>
+        <ObjectUnionOf>
+            <Class IRI="Brand"/>
+            <Class IRI="Episode"/>
+            <Class IRI="Series"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="commentator"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="credit"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="director"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="episode"/>
+        <ObjectUnionOf>
+            <Class IRI="Brand"/>
+            <Class IRI="Series"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="executive_producer"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="format"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="genre"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="location"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="masterbrand"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="microsite"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="news_reader"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="outlet"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="parent_series"/>
+        <Class IRI="Series"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="parent_service"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="participant"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="performer"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="person"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="place"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="producer"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="season_broadcast"/>
+        <Class IRI="Season"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="series"/>
+        <ObjectUnionOf>
+            <Class IRI="Brand"/>
+            <Class IRI="Series"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="service"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="subject"/>
+        <Class IRI="Programme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="time"/>
+        <ObjectUnionOf>
+            <Class IRI="Segment"/>
+            <Class IRI="Version"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="track"/>
+        <Class IRI="MusicSegment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="version"/>
+        <Class IRI="ProgrammeItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="tags:tag"/>
+        <Class IRI="ProgrammeItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="actor"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="anchor"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="author"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="broadcast_of"/>
+        <Class IRI="Version"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="broadcast_on"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="broadcaster"/>
+        <Class IRI="Broadcaster"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="category"/>
+        <Class IRI="Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="channel"/>
+        <Class IRI="Channel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="clip"/>
+        <Class IRI="Clip"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="commentator"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="credit"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="director"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="episode"/>
+        <Class IRI="Episode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="executive_producer"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="format"/>
+        <Class IRI="Format"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="genre"/>
+        <Class IRI="Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="location"/>
+        <Class abbreviatedIRI="geo:SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="masterbrand"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="microsite"/>
+        <Class abbreviatedIRI="foaf:Document"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="news_reader"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="outlet"/>
+        <Class IRI="Outlet"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="parent_series"/>
+        <Class IRI="Series"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="parent_service"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="participant"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="performer"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="person"/>
+        <Class IRI="Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="place"/>
+        <Class IRI="Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="producer"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="season_broadcast"/>
+        <Class IRI="Broadcast"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="series"/>
+        <Class IRI="Series"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="service"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="subject"/>
+        <Class IRI="Subject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="time"/>
+        <Class abbreviatedIRI="tl:Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="track"/>
+        <Class abbreviatedIRI="mo:Track"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="version"/>
+        <Class IRI="Version"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="tags:tag"/>
+        <Class abbreviatedIRI="tags:Tagging"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="long_synopsis"/>
+        <DataProperty IRI="synopsis"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="medium_synopsis"/>
+        <DataProperty IRI="synopsis"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="short_synopsis"/>
+        <DataProperty IRI="synopsis"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="aspect_ratio"/>
+        <Class IRI="Version"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="frequency"/>
+        <Class IRI="Channel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="position"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="tl:Interval"/>
+            <Class IRI="Episode"/>
+            <Class IRI="Series"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="schedule_date"/>
+        <Class IRI="Broadcast"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="sound_format"/>
+        <Class IRI="Version"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="subtitle_language"/>
+        <Class IRI="Version"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="synopsis"/>
+        <Class IRI="Programme"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="text"/>
+        <Class IRI="Subtitle"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="aspect_ratio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="duration"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="frequency"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="position"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="schedule_date"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="sound_format"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="subtitle_language"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="synopsis"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="text"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AudioDescribedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A version holding an audio description.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AudioDescribedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">audio description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>AudioDescribedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Brand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A brand, e.g. `Top Gear&apos;
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Brand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">brand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Brand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Broadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A broadcast event.
+		Subsumes the event concept defined in
+		the Event ontology.
+		A broadcast is associated with a service, and with a
+		particular version of an episode.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Broadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">broadcast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Broadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Broadcaster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		An organization responsible of some broadcasting services. 
+        It can hold a set of services and outlets.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Broadcaster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">broadcaster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Broadcaster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Category</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        A category provides a way of classifying a set of programmes. Such classifications
+        can be performed according to multiple dimensions and taxonomies, e.g. genre, format, places, people, subjects...
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Category</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Category</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Channel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        A physical channel on which a broadcast occurs.
+        A single outlet or service can be associated with multiple channels. 
+        For example, Radio 4 LW broadcasts on Analogue Long Wave and on Digital
+        Satellite.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Channel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">physical channel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Channel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Clip</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        A particular clip, e.g. `Clip of Top Gear, first series&apos;
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Clip</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clip</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Clip</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DAB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Digital Audio Broadcasting
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DAB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">DAB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>DAB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DVB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Digital Video Broadcasting
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DVB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">DAB</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>DVB</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Episode</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A particular episode, e.g. `Top Gear, first episode of the first series&apos; or the film &apos;A Walk in the Sun&apos; (http://www.bbc.co.uk/programmes/b00gfzdt)
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Episode</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">episode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Episode</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FM</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		The FM broadcast band
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FM</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>FM</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FirstBroadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Specifies a broadcast as being the 
+		first one of a particular version.
+	 </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FirstBroadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">first broadcast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>FirstBroadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Anchor point for format taxonomies, similar to po:Genre for genre taxonomies.
+        Instances of this concept include documentaries, talk shows, animation, etc.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        An anchor point for a programmes&apos; genre taxonomy, e.g. &apos;Drama&apos;/&apos;Biographical&apos;.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IPStream</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		IP stream
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IPStream</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IP stream</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>IPStream</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LW</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		The AM broadcast band
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LW</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>LW</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LocalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Radio services aiming at a local coverage.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LocalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">radio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>LocalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MusicSegment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Classification of an episode version&apos;s region corresponding to a musical track being played.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>MusicSegment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NationalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Radio services aiming at a national coverage.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NationalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">national radio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>NationalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OriginalVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		An `original&apos; version, the legacy version of
+		a particular episode.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OriginalVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">original version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>OriginalVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Outlet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Outlet of a particular service, e.g. Radio 4 LW and FM for Radio 4.
+        Outlets are services which do not have variations.
+        The identity criteria for an outlet is its timeline. 
+        For example, Radio 4 LW broadcasts on Analogue Long Wave, but also on Digital Satellite.
+        It corresponds to just one outlet, as they are simulcasts.
+        The two physical channels for broadcasts correspond to po:Channel.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Outlet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">outlet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Outlet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A physical place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Programme</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A programme, can either be a brand, a series or an episode
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Programme</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">programme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Programme</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ProgrammeItem</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        A programme that can have versions, and as such can be broadcast or made available on-demand, e.g. a clip or an episode.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ProgrammeItem</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">programme item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>ProgrammeItem</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Radio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Services that use a radio medium.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Radio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">radio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Radio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RegionalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Radio services aiming at a regional coverage.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RegionalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">regional radio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>RegionalRadio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RepeatBroadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Specifies a broadcast as being a 
+		repeat.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RepeatBroadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">repeat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>RepeatBroadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Season</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A season is a group of broadcasts.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Season</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">season</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Season</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Segment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Classification of an episode version&apos;s region, e.g. &apos;this track was played at that time&apos;.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Segment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">segment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Segment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A series, e.g. `Top Gear, first season&apos;
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">series</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        A broadcasting service.
+		Instances of this concept include BBC Radio Wales, BBC Radio 4, BBC News, etc.
+        A service is a collection of outlets which contain common material, but with some variations, e.g. by
+        region.
+        Hence, a service may have multiple outlets (po:Outlet), e.g. BBC Radio 4 has BBC Radio 4 LW and BBC Radio 4 FM.
+        A hierarchy of services types is defined within this ontology, e.g. radio and TV.
+        A service that is a master brand only (a service that only commissions programmes, e.g. BBC Switch) should 
+        be an instance of the top-level po:Service.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ShortenedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A shortened version.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShortenedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">shortened version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>ShortenedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SignedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A version holding sign language.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SignedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">sign language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>SignedVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SpeechSegment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Classification of an episode version&apos;s region holding speech content.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>SpeechSegment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Subject</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Anchor point for subject taxonomies.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Subject</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Subject</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Subtitle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Classification of an episode version&apos;s region corresponding to a subtitle being shown. 
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Subtitle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">subtitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Subtitle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TV</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Services that use a television medium.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TV</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">tv</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>TV</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A particular version of an episode.
+		Such versions include shortened ones, audio described ones
+		or ones that holds sign language.
+		The version is associated to a timeline.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Web</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Services that use a Web medium.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Web</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>Web</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>actor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programmes to one of its actors - a person who plays the role of a character</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>actor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>actor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>anchor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A television reporter who coordinates a programme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>anchor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">anchor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>anchor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>aspect_ratio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		The aspect ration of a particular version.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>aspect_ratio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">aspect ratio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>aspect_ratio</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>author</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to its author - the person who created the content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>author</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>author</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>broadcast_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Relates a particular broadcast to the version being broadcasted.
+		Sub-property of the event:factor one.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>broadcast_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">broadcast of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>broadcast_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>broadcast_on</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Relates a particular broadcast to the service or outlet on which it was on.
+		Sub-property of the event:factor one.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>broadcast_on</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">broadcast on</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>broadcast_on</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>broadcasted_on</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Deprecated property, left here for historical reasons</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>broadcaster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associates a service to a broadcaster
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>broadcaster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">broadcaster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>broadcaster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>category</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Relates a programme to a particular category, e.g. genre, format, place...
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>category</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>category</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>channel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Associates a service to a channel, e.g. Radio 4 LW to Radio 4 LW on Analogue Long Wave.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>channel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">channel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>channel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>clip</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Associates a brand, a series or an episode to a clip.
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>clip</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">clip</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>clip</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>commentator</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to one of its commentators</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commentator</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">commentator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>commentator</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>credit</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programmes to a person who is credited in it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>credit</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">credit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>credit</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>director</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to its supervisor. Generally refers to the person responsible for all audience-visible components of a program, film, or show, whereas the producer is responsible for the financial and other behind-the-scenes aspects. A director&apos;s duties might also include casting, script editing, shot selection, shot composition, and editing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>director</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">director</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>director</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>duration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The duration of a version, in seconds.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>duration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">duration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>duration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>episode</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associates a brand or a series to an episode constituting it.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>episode</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">episode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>episode</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>executive_producer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to its executive producer - a producer who is not involved in any technical aspects of the making process, but who is still responsible for the overall production. Typically an executive producer handles business and legal issues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>executive_producer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">executive producer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>executive_producer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Relates a programme to a particular format (eg. `Animation&apos;, `Documentary&apos;, etc.).
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates a channel to its frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>frequency</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Relates a programme to a particular genre.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">genre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>genre</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>location</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associates a service to a geographic location, 
+		aiming at capturing what this service aims at covering.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>location</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>location</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>long_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A long synopsis of a serie, brand or episode.
+		Sub-property of po:synopsis.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>long_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">long synopsis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>long_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>masterbrand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates a programme with its masterbrand (its commissionner)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>masterbrand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">masterbrand</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>masterbrand</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>medium_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A medium synopsis of a serie, brand or episode.
+		Sub-property of po:synopsis.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>medium_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">medium synopsis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>medium_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>microsite</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates a programme to its microsite. For example http://www.bbc.co.uk/programmes/b00fm04s and http://www.bbc.co.uk/eastenders/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>microsite</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">microsite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>microsite</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>news_reader</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to its news reader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>news_reader</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">news reader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>news_reader</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>outlet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associates a service to an outlet, e.g. Radio 4 to Radio 4 LW.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>outlet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">outlet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>outlet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>parent_series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Relates a series to a series constituting it (eg. `Waking the dead&apos;).
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>parent_series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">parent serie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>parent_series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>parent_service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Relates a service to another service encapsulating it (eg. `BBC One&apos; and `BBC One South&apos;)
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>parent_service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">parent service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>parent_service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>participant</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to one of its participants</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>participant</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>participant</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>performer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to an entertainer who performs a dramatic or musical work for audience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>performer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">performer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>performer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Relates a programme to a person
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Relates a programme to a place (e.g. `London&apos;)
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The position of a particular series or episode within its containing programme. This property can also be used to give the position of an interval within the containing timeline.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>position</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>producer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Relates a programme to its producer - the manager of an event, show, or other work, usually the individual in charge of finance, personnel, and other non-artistic aspects in the development of commercials, plays, movies, and other works</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>producer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">producer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>producer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>schedule_date</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		The schedule date of a broadcast event.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>schedule_date</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">schedule date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>schedule_date</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>season_broadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates a season to its constituent broadcasts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>season_broadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">broadcast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>season_broadcast</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associates a brand or a series to a series constituting it.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">series</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>series</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associate a brand, series or episode to the master brand service.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>short_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		A short synopsis of a serie, brand or episode.
+		Sub-property of po:synopsis.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>short_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">short synopsis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>short_synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>sound_format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		The sound format of a particular version.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sound_format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">sound format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>sound_format</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>subject</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+        Relates a programme to a subject (e.g. `easter&apos;)
+    </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>subject</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>subject</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>subtitle_language</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Language of the subtitles emebedded in a particular version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>subtitle_language</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">subtitle language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>subtitle_language</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		The synopsis of a serie, brand or episode.
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">synopsis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>synopsis</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates a subtitle event to the corresponding text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>text</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>time</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates an episode&apos;s version or a version&apos;s segment with a temporal interval. This interval can be associated with a timeline, serving as an anchor for further temporal annotations, e.g. subtitles or played track</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>time</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>time</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>track</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates a music segment with a track, as defined in MO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>track</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">track</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>track</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">
+		Associate an episode to a version of it.
+		Different versions of a same episode can exist (shortened version, version
+		designed for the hearing impaired, etc.). 
+	</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <IRI>version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>tags:tag</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Associates an episode to a particular tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>tags:tag</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="vs:term_status"/>
+        <AbbreviatedIRI>tags:tag</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">stable</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
